@@ -9,7 +9,6 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const dataMethod = require('/datastore/counter');
 
 const app = express();
 app.use(morgan('dev'));
@@ -26,10 +25,6 @@ app.post('/todo', (req, res) => {
       res.sendStatus(400);
     } else {
       res.status(201).json(newTodo);
-      res.end(dataMethod.create());
-      // invoke exports.create from index.js
-
-      // which will create a unique id and create path in data dir
     }
   });
 });

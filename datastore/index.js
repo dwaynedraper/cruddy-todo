@@ -12,7 +12,7 @@ exports.create = (text, callback) => {
     if (err) {
       callback(err);
     } else {
-      fs.WriteFile(path.join(exports.dataDir, `${newId}.txt`), text, (err) => {
+      fs.writeFile(path.join(exports.dataDir, `${newId}.txt`), text, (err) => {
         if (err) {
           callback(err);
         } else {
