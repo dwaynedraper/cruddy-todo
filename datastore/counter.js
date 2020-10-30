@@ -49,7 +49,6 @@ exports.getNextUniqueId = (callback) => {
           callback(err);
         } else {
           callback(err, newId);
-          return counter;
         }
       });
     }

@@ -4,7 +4,7 @@ $(() => {
 
   var template = _.template(`
     <li data-id="<%=id%>" class="todo">
-      <span><%=text%></span>
+      <span><%=id%></span>
       <button data-action="edit">edit</button>
       <button data-action="done">&#x2714;</button>
     </li>
